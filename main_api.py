@@ -149,16 +149,15 @@ class MemGPTChatbot:
         # Load files
         try:
             self.memgpt_agent.load_from_json_file_inplace(load_path)
+            print(f"Loaded profile from {load_path}")
         except Exception as e:
             print(f"Error loading profile from {load_path}: {e}")
 
         try:
             self.memgpt_agent.persistence_manager = InMemoryStateManager.load(pm_path)
+            print(f"Loaded persistence manager from {pm_path}")
         except Exception as e:
             print(f"Error loading persistence manager from {pm_path}: {e}")
-
-        print(f"Loaded conversation from {load_path}")
-        print(f"Loaded persistence manager from {pm_path}")
 
 
 async def main():

@@ -13,7 +13,7 @@ import glob
 import sqlite3
 import fitz
 from tqdm import tqdm
-from memgpt.openai_tools import async_get_embedding_with_backoff
+from fastapi_app.MemGPT.memgpt.openai_tools import async_get_embedding_with_backoff
 
 def count_tokens(s: str, model: str = "gpt-4") -> int:
     encoding = tiktoken.encoding_for_model(model)

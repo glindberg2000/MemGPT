@@ -3,6 +3,8 @@ import re
 
 from colorama import Fore, Style, init
 
+# FastAPI needs absolute paths
+# from memgpt.utils import printd
 from fastapi_app.MemGPT.memgpt.utils import printd
 
 init(autoreset=True)
